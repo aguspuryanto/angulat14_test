@@ -19,35 +19,35 @@ export class SupplierService {
   constructor(private httpClient: HttpClient) { }
     
   getAll(): Observable<Supplier[]> {
-    return this.httpClient.get<Supplier[]>(this.apiURL + '/products/')
+    return this.httpClient.get<Supplier[]>(this.apiURL + '/users/')
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
   create(post: any): Observable<Supplier> {
-    return this.httpClient.post<Supplier>(this.apiURL + '/products/', JSON.stringify(post), this.httpOptions)
+    return this.httpClient.post<Supplier>(this.apiURL + '/users/', JSON.stringify(post), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }  
     
   find(id: string): Observable<Supplier> {
-    return this.httpClient.get<Supplier>(this.apiURL + '/products/' + id)
+    return this.httpClient.get<Supplier>(this.apiURL + '/users/' + id)
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
   update(id: string, post: any): Observable<Supplier> {
-    return this.httpClient.put<Supplier>(this.apiURL + '/products/' + id, JSON.stringify(post), this.httpOptions)
+    return this.httpClient.put<Supplier>(this.apiURL + '/users/' + id, JSON.stringify(post), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
   delete(id: number): Observable<Supplier> {
-    return this.httpClient.delete<Supplier>(this.apiURL + '/products/' + id, this.httpOptions)
+    return this.httpClient.delete<Supplier>(this.apiURL + '/users/' + id, this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
