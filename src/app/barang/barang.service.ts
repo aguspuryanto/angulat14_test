@@ -28,28 +28,28 @@ export class BarangService {
   }
     
   create(post: any): Observable<Barang> {
-    return this.httpClient.post<Barang>(this.apiURL + '/posts/', JSON.stringify(post), this.httpOptions)
+    return this.httpClient.post<Barang>(this.apiURL + '/products/', JSON.stringify(post), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }  
     
   find(id: string): Observable<Barang> {
-    return this.httpClient.get<Barang>(this.apiURL + '/posts/' + id)
+    return this.httpClient.get<Barang>(this.apiURL + '/products/' + id)
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
   update(id: string, post: any): Observable<Barang> {
-    return this.httpClient.put<Barang>(this.apiURL + '/posts/' + id, JSON.stringify(post), this.httpOptions)
+    return this.httpClient.put<Barang>(this.apiURL + '/products/' + id, JSON.stringify(post), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
   delete(id: number): Observable<Barang> {
-    return this.httpClient.delete<Barang>(this.apiURL + '/posts/' + id, this.httpOptions)
+    return this.httpClient.delete<Barang>(this.apiURL + '/products/' + id, this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )

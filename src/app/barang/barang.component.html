@@ -22,14 +22,14 @@
       <th>Harga</th>
       <th width="220px">Action</th>
     </tr>
-    <tr *ngFor="let post of products">
-      <td>{{ post.id }}</td>
-      <td>{{ post.title }}</td>
-      <td>{{ post.price }}</td>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.price }}</td>
       <td>
-        <a href="#" [routerLink]="['/post/', post.id, 'view']" class="btn btn-info">View</a>
-        <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a>
-        <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
+        <a href="#" [routerLink]="['/barang/', product.id, 'view']" class="btn btn-info">View</a>
+        <a href="#" [routerLink]="['/barang/', product.id, 'edit']" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="deletePost(product.id)" class="btn btn-danger">Delete</button>
       </td>
     </tr>
   </table>
